@@ -9,11 +9,15 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'clientes',
+    component: HomeComponent
+  },
+  {
     path: 'cadastrar',
     component: DataFormComponent
   },
   {
-    path: 'clientes',
-    component: HomeComponent
+    path: '**',
+    redirectTo: '/clientes'
   }
 ];
