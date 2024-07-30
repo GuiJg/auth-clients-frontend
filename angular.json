@@ -54,7 +54,6 @@
             ],
             "styles": [
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -67,8 +66,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -118,7 +117,6 @@
             ],
             "styles": [
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []

@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { NzTableModule } from 'ng-zorro-antd/table';
-import { ToastrService } from 'ngx-toastr';
 import Sweet from 'sweetalert2';
 
 @Component({
@@ -15,8 +14,6 @@ import Sweet from 'sweetalert2';
 export class HomeComponent implements OnInit {
   private apiUrl = 'https://auth-clients-backend.vercel.app';
   listOfData: any[] = []; 
-
-  constructor(private toastr: ToastrService) {} 
 
   ngOnInit() {
     this.getClients();
@@ -33,11 +30,11 @@ export class HomeComponent implements OnInit {
 
   async createClient(data: any) {
     try {
-      const response = await axios.post(`${this.apiUrl}/client`, data);
-      this.toastr.success('Cliente criado com sucesso!', 'Sucesso');
+      await axios.post(`${this.apiUrl}/client`, data);
+      Sweet.fire('Sucesso', 'Cliente criado com sucesso', 'success');
       this.getClients();
     } catch (error) {
-      this.toastr.error('Erro ao criar cliente.', 'Erro');
+      Sweet.fire('Erro', 'Erro ao criar cliente', 'error');
       console.error(error);
     }
   }
@@ -55,11 +52,11 @@ export class HomeComponent implements OnInit {
     });
     if (result.isConfirmed) {
       try {
-        const response = await axios.delete(`${this.apiUrl}/client/${id}`);
-        this.toastr.success('Cliente deletado com sucesso!', 'Sucesso');
+        await axios.delete(`${this.apiUrl}/client/${id}`);
+        Sweet.fire('Sucesso', 'Cliente excluído com sucesso', 'success');
         this.getClients();
       } catch (error) {
-        this.toastr.error('Erro ao deletar cliente.', 'Erro');
+        Sweet.fire('Erro', 'Erro ao excluir cliente', 'error');
         console.error(error);
       }
     }
