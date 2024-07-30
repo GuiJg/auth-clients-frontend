@@ -1,0 +1,25 @@
+<h1>Clientes cadastrados</h1>
+<nz-table #basicTable [nzData]="listOfData" [nzBordered]="true">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Empresa</th>
+      <th>CNPJ</th>
+      <th>E-mail</th>
+      <th>Endereço</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of basicTable.data">
+      <td>{{ item.name }}</td>
+      <td>{{ item.company }}</td>
+      <td>{{ item.cnpj }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.address }}</td>
+      <td>
+        <button class="btn-client" nz-button nzType="primary" nzDanger (click)="deleteItem(item._id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
