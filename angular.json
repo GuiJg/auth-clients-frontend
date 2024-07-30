@@ -54,6 +54,8 @@
               }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -113,6 +115,8 @@
               }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -120,5 +124,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4b5fd306-df3f-41d2-bc82-89598048e523"
   }
 }
