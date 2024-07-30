@@ -1,0 +1,43 @@
+<form [formGroup]="dataForm" (ngSubmit)="onSubmit()" nz-form>
+  <h2>Cadastrar Clientes</h2>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="name">Nome</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input id="name" formControlName="name" />
+    </nz-form-control>
+  </nz-form-item>
+  
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="company">Empresa</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input id="company" formControlName="company" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="cnpj">CNPJ</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input id="cnpj" formControlName="cnpj" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="email">E-mail</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input id="email" formControlName="email" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="address">Endereço</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input id="address" formControlName="address" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      <button class="btn-form" nz-button type="submit">Enviar</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

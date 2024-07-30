@@ -1,0 +1,18 @@
+.form-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+.btn-form{
+    background-color: #4096ff;
+    border: 1px solid #00000020;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #fff
+}
